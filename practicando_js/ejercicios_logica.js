@@ -16,21 +16,21 @@
 function transformar_teclado_t9(palabra){
     let palabra_descubierta=""
     const tecla_t9={
-        3:"d",
-        33: "e",
-        888: "v",
-        6: "m",
-        666:"o",
-        88:"u",
-        777:"r",}
+        2:"abc",
+        3: "def",
+        4: "ghi",
+        5: "jkl",
+        6:"mno",
+        7:"pqrs",
+        8:"tuv",
+        9: "wxyz"}
     palabra_nueva= palabra.split("-")
     for(let i= 0; i< palabra_nueva.length; i++){
-        if (palabra_nueva[i] in tecla_t9){
-            palabra_descubierta+= tecla_t9[palabra_nueva[i]]       
-        }     
+        palabra_descubierta+= tecla_t9 [palabra_nueva[i][0]][(palabra_nueva[i].length)-1]   
     }return palabra_descubierta.toUpperCase()
 }
-//console.log(transformar_teclado_t9("6-666-88-777-33-3-33-888"))
+console.log(transformar_teclado_t9("6-666-88-777-33-3-33-888"))
+
 
 
 function ordenamiento(lista){
@@ -64,3 +64,22 @@ function fibonacci(n){
     }
 }
 console.log(fibonacci(10))
+
+
+//fizbuzz
+/* Escribe una función que imprima los números del 1 al 100. Pero para múltiplos de tres,
+imprime "Fizz" en lugar del número, y para los múltiplos de cinco, imprime "Buzz". 
+Para números que son múltiplos de ambos tres y cinco, imprime "FizzBuzz". */
+function fizzbuzz(){
+    for(let i= 1; i <101; i++){
+        if (i%3==0 && i%5==0){
+            console.log("fizzbuzz")
+        }else if(i%3==0){
+            console.log("fizz")
+        }else if(i%5==0){
+            console.log("buzz")
+        }else{
+            console.log(i)
+        }
+    }
+}
