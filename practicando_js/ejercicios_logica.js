@@ -24,7 +24,7 @@ function transformar_teclado_t9(palabra){
         7:"pqrs",
         8:"tuv",
         9: "wxyz"}
-    palabra_nueva= palabra.split("-")
+    let palabra_nueva= palabra.split("-")
     for(let i= 0; i< palabra_nueva.length; i++){
         palabra_descubierta+= tecla_t9 [palabra_nueva[i][0]][(palabra_nueva[i].length)-1]   
     }return palabra_descubierta.toUpperCase()
